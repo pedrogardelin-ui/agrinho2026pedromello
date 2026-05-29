@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Energias Renováveis | O futuro sustentável</title>
+    <meta name="description" content="Descubra a importância das energias renováveis para um planeta mais limpo, sustentável e economicamente viável. Saiba mais sobre solar, eólica, hidrelétrica e biomassa.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #f0f9f0 0%, #e0f0e5 100%);
+            color: #1a2e1f;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* container principal */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / navegação */
+        header {
+            background: rgba(20, 55, 30, 0.92);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid #c0e0b0;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #E0FFC0, #A8E6A0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #f4fff0;
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1.05rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover {
+            border-bottom-color: #b9f6a0;
+            color: #e9ffdb;
+            transform: translateY(-1px);
+        }
+
+        /* hero section */
+        .hero {
+            padding: 80px 0 70px;
+            text-align: center;
+            background: radial-gradient(circle at 80% 20%, rgba(170, 230, 140, 0.3), transparent);
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1f5a2e, #3a9b4a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 780px;
+            margin: 0 auto 30px;
+            color: #2c4b2f;
+            font-weight: 500;
+        }
+
+        .btn-cta {
+            background: #2b7a3e;
+            border: none;
+            color: white;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-cta:hover {
+            background: #1f5e2e;
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(40, 90, 30, 0.3);
+        }
+
+        /* cards de introdução */
+        .intro-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin: 60px 0 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 32px;
+            padding: 28px 24px;
+            flex: 1 1 260px;
+            text-align: center;
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(130, 200, 100, 0.4);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: white;
+            border-color: #92d47c;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            color: #1f542c;
+        }
+
+        .card p {
+            color: #2c3e2a;
+        }
+
+        /* seção importância */
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            margin: 70px 0 40px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            font-weight: 700;
+            color: #1f4626;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 90px;
+            height: 4px;
+            background: #46b86e;
+            margin: 12px auto 0;
+            border-radius: 4px;
+        }
+
+        .importance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 32px;
+            margin: 20px 0 60px;
+        }
+
+        .importance-item {
+            background: #ffffffcc;
+            backdrop-filter: blur(4px);
+            border-radius: 28px;
+            padding: 28px 22px;
+            transition: 0.2s;
+            border-left: 8px solid #3cad5a;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+        }
+
+        .importance-item h4 {
+            font-size: 1.7rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .importance-item p {
+            font-size: 1rem;
+            color: #1e3a24;
+        }
+
+        /* tipos de renováveis */
+        .types-section {
+            background: #e6f4e2;
+            border-radius: 56px;
+            padding: 40px 30px;
+            margin: 20px 0 70px;
+            box-shadow: inset 0 0 0 1px rgba(90, 150, 60, 0.2), 0 8px 18px rgba(0,0,0,0.05);
+        }
+
+        .types-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .type-badge {
+            background: white;
+            border-radius: 48px;
+            padding: 16px 28px;
+            width: 220px;
+            text-align: center;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 1px solid #bfe2ad;
+        }
+
+        .type-badge:hover {
+            transform: scale(1.02);
+            background: #fafff2;
+            border-color: #66bb6a;
+        }
+
+        /* dados / impacto */
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            background: #1f3d27;
+            color: white;
+            padding: 50px 30px;
+            border-radius: 60px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            color: #c6ffb0;
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* CTA final */
+        .cta-final {
+            text-align: center;
+            background: #daf5cf;
+            padding: 55px 30px;
+            border-radius: 60px;
+            margin: 40px 0 60px;
+        }
+
+        .cta-final h2 {
+            font-size: 2rem;
+            color: #1f542c;
+        }
+
+        .cta-final p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        footer {
+            background: #102b15;
+            color: #cfebc2;
+            padding: 36px 0 28px;
+            text-align: center;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 760px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                gap: 18px;
+                margin-top: 12px;
+            }
+            .nav-bar {
+                flex-direction: column;
+            }
+            .section-title {
+                font-size: 1.9rem;
+            }
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+        }
+
+        button, .btn-cta {
+            background: #2b7a3e;
+            border: none;
+            font-family: inherit;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-bar">
+        <div class="logo">☀️ Energia Viva</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#importancia">Importância</a></li>
+            <li><a href="#tipos">Tipos</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- Hero / Início -->
+    <section id="inicio">
+        <div class="container hero">
+            <h1>Energias Renováveis: o amanhã começa agora</h1>
+            <p>Descubra por que migrar para fontes limpas é a maior oportunidade do nosso século para o planeta, a economia e as futuras gerações.</p>
+            <a href="#importancia" class="btn-cta">Explorar benefícios →</a>
+        </div>
+    </section>
+
+    <!-- cards rápidos -->
+    <div class="container intro-cards">
+        <div class="card">
+            <div class="card-icon">🌍</div>
+            <h3>Planeta + Saudável</h3>
+            <p>Redução drástica de CO₂ e combate às mudanças climáticas.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">💰</div>
+            <h3>Economia circular</h3>
+            <p>Custo de geração em queda, independência energética e empregos verdes.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔋</div>
+            <h3>Infinitas fontes</h3>
+            <p>Sol, vento, água e biomassa: energia abundante e perene.</p>
+        </div>
+    </div>
+
+    <!-- Importância detalhada -->
+    <div class="container" id="importancia">
+        <h2 class="section-title">Por que investir em renováveis é essencial?</h2>
+        <div class="importance-grid">
+            <div class="importance-item">
+                <h4>🌡️ Combate ao aquecimento global</h4>
+                <p>As energias renováveis emitem quase zero gases de efeito estufa. Substituir combustíveis fósseis por solar e eólica é a principal arma contra o aumento da temperatura global, evitando catástrofes climáticas.</p>
+            </div>
+            <div class="importance-item">
+                <h4>💧 Ar puro e saúde pública</h4>
+                <p>Usinas de carvão e petróleo causam doenças respiratórias e milhões de mortes prematuras por ano. Energia limpa significa menos poluição, menos internações e cidades mais respiráveis.</p>
+            </div>
+            <div class="importance-item">
+                <h4>⚡ Independência e resiliência</h4>
+                <p>Países que apostam em renováveis reduzem a dependência de combustíveis importados, evitam crises de abastecimento e garantem segurança energética mesmo em conflitos geopolíticos.</p>
+            </div>
+            <div class="importance-item">
+                <h4>👩‍🔬 Empregos do futuro</h4>
+                <p>O setor renovável já gera milhões de empregos no mundo: instalação, manutenção, pesquisa e inovação. Cada megawatt investido gera 3x mais postos de trabalho que os combustíveis fósseis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- tipos de energias -->
+    <div class="container types-section" id="tipos">
+        <h2 class="section-title" style="margin-top:0;">🌱 Principais fontes renováveis</h2>
+        <div class="types-flex">
+            <div class="type-badge">☀️ Energia Solar</div>
+            <div class="type-badge">💨 Energia Eólica</div>
+            <div class="type-badge">💧 Hidrelétrica</div>
+            <div class="type-badge">🌾 Biomassa</div>
+            <div class="type-badge">🌊 Maremotriz</div>
+            <div class="type-badge">🌋 Geotérmica</div>
+        </div>
+        <div style="margin-top: 30px; display: grid; gap: 18px; font-size: 1rem;">
+            <p><strong>☀️ Solar:</strong> painéis fotovoltaicos convertem luz solar diretamente em eletricidade. Baixo custo e ideal para telhados urbanos.</p>
+            <p><strong>💨 Eólica:</strong> turbinas aproveitam a força dos ventos; parques eólicos onshore e offshore têm capacidade gigantesca.</p>
+            <p><strong>💧 Hidrelétrica:</strong> utiliza o fluxo de rios; grande potência, mas com responsabilidade socioambiental para preservar ecossistemas.</p>
+            <p><strong>🌾 Biomassa:</strong> a partir de resíduos orgânicos e agrícolas gera biogás e bioeletricidade, fechando o ciclo sustentável.</p>
+        </div>
+    </div>
+
+    <!-- seção de impacto em números -->
+    <div class="container" id="impacto">
+        <div class="stats">
+            <div class="stat-item">
+                <h3>+29%</h3>
+                <p>da eletricidade global<br>vem de renováveis (2024)</p>
+            </div>
+            <div class="stat-item">
+                <h3>−70%</h3>
+                <p>custo de painéis solares<br>na última década</p>
+            </div>
+            <div class="stat-item">
+                <h3>12 milhões</h3>
+                <p>empregos diretos<br>no setor renovável</p>
+            </div>
+            <div class="stat-item">
+                <h3>~50%</h3>
+                <p>redução de CO₂ até 2030<br>com transição energética</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- desafios e soluções -->
+    <div class="container">
+        <div style="background: #fafef5; border-radius: 48px; padding: 40px 30px; margin-bottom: 50px;">
+            <h2 style="font-size: 1.9rem; margin-bottom: 20px; color:#256f38;">⚡ Mitos & verdades sobre renováveis</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between;">
+                <div style="flex:1; min-width: 220px;">
+                    <p style="font-weight: bold;">🔹 "O sol não brilha sempre" → As baterias e o hidrogênio verde armazenam energia para uso noturno. A complementaridade entre solar e eólica garante estabilidade.</p>
+                </div>
+                <div style="flex:1; min-width: 220px;">
+                    <p style="font-weight: bold;">🔹 "É muito cara" → Nas últimas décadas, o custo nivelado da energia solar caiu 85% e a eólica 55%, sendo hoje mais baratas que carvão ou gás.</p>
+                </div>
+                <div style="flex:1; min-width: 220px;">
+                    <p style="font-weight: bold;">🔹 "Prejudica paisagens" → Projetos modernos integram arquitetura sustentável e parques eólicos offshore evitam impacto visual. O ganho climático supera qualquer desafio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chamada para ação final -->
+    <div class="container">
+        <div class="cta-final">
+            <h2>Você pode fazer parte dessa mudança ✨</h2>
+            <p>Pequenas atitudes geram grandes transformações: exija políticas verdes, escolha fornecedores de energia limpa, invista em eficiência energética e compartilhe conhecimento.</p>
+            <a href="#" style="background: #1f6436; display: inline-block; margin-top: 20px;" class="btn-cta" id="btnSaberMais">Quero saber como contribuir →</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2025 Energia Viva — Conscientização sobre energias renováveis | Todos os direitos reservados</p>
+        <p style="margin-top: 14px; font-size: 0.85rem;">🌎 Cada kWh renovável é um passo para um amanhã mais verde e justo.</p>
+    </div>
+</footer>
+
+<!-- modal interativo simples com JavaScript -->
+<div id="modalContribuir" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background: #fff; max-width: 480px; width: 90%; border-radius: 44px; padding: 32px 28px; text-align: center; box-shadow: 0 30px 40px rgba(0,0,0,0.2);">
+        <h3 style="font-size: 1.8rem; margin-bottom: 16px; color: #1d6f3a;">💡 Dicas práticas</h3>
+        <ul style="text-align: left; margin: 20px 0; list-style: none; line-height: 2;">
+            <li>🏠 Instale painéis solares ou aquecedor solar em casa.</li>
+            <li>💡 Troque lâmpadas por LED e opte por eletros eficientes.</li>
+            <li>🚲 Prefira transporte ativo, público ou veículos elétricos.</li>
+            <li>📢 Cobrar de governos incentivos para energias limpas.</li>
+            <li>📉 Reduza o desperdício de energia: desplugue aparelhos.</li>
+        </ul>
+        <button id="closeModalBtn" style="background: #2c7a4a; color: white; border: none; padding: 12px 28px; border-radius: 60px; font-size: 1rem; font-weight: bold; cursor: pointer;">Fechar</button>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // botão CTA final e modal
+        const btn = document.getElementById('btnSaberMais');
+        const modal = document.getElementById('modalContribuir');
+        const closeBtn = document.getElementById('closeModalBtn');
+
+        if (btn && modal) {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        function closeModal() {
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        // fechar ao clicar fora do conteúdo
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        }
+
+        // navegação suave para links internos
+        const links = document.querySelectorAll('.nav-links a, .btn-cta[href^="#"]');
+        links.forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const hash = this.getAttribute('href');
+                if (hash && hash !== '#') {
+                    const targetId = hash.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>
